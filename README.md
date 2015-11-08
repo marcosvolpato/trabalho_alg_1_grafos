@@ -2,6 +2,7 @@
 Trabalho de ALG-I sobre grafos para curso de sistemas de informação da USP
 
  Authors:	 	
+ 
 				name: Allan Ribeiro da Costa
 				uri: https://github.com/allan074
 				e-mail: <email>
@@ -11,9 +12,11 @@ Trabalho de ALG-I sobre grafos para curso de sistemas de informação da USP
 				e-mail: volpatomv@gmail.com
 				
  Repository: 	
+ 
 				https://github.com/marcosvolpato/trabalho_alg_1_grafos
  
  Relatório: 	
+ 
 				A aplicação foi dividida em 6 arquivos. O arquivo tipos.h contem as estruturas de dados usadas são elas:
 			t_aresta, t_vertice e t_grafo usadas para representar o grafo e nas suas operações, também t_f_no e t_fila,
 			usadas respectivamente para representar um nó de uma fila e a fila em si.
