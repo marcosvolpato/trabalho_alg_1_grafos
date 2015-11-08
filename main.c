@@ -3,8 +3,17 @@
  *
  * Date: 		07/11/2015
  *
+ * Authors:	 	name: Allan Ribeiro da Costa
+ *				uri: https://github.com/allan074
+ *				e-mail: <email>
+ *
+ *         		name: Marcos Vinicius Volpato
+ * 				uri: https://github.com/marcosvolpato
+ *				e-mail: volpatomv@gmail.com
+ *
+ * Repository: 	https://github.com/marcosvolpato/trabalho_alg_1_grafos
+ *
  * Description: entrada:
- * 
  *				A primeira linha da entrada consiste no número do vértice a ser analisado.
  *				A segunda linha indica a quantidade N de arestas que serão lidas.
  *				A terceira linha para frente apresenta cada uma das N arestas, da 
@@ -12,14 +21,11 @@
  *				x y
  * 
  *				Saída:
- *				
  *				Será composta pelo resultado de cada uma das medidas. Cada resultado deve ser apresentado em uma linha
  *				diferente, seguindo a ordem de apresentação das medidas (Primeira linha o grau, segunda linha o grau médio dos
  *				vizinhos...)
  *
- *				
  * Usage:		Exemplo de entrada:
- *
  *				1
  *				14
  *				1 2
@@ -38,22 +44,10 @@
  *				7 10
  * 
  * 				resulta na saída:
- * 				
  * 				6
  *				2.66
  *				0.13
  *				3
- *
- * Repository: 	https://github.com/marcosvolpato/trabalho_alg_1_grafos
- *
- * Authors:	 	name: Allan Ribeiro da Costa
- *				uri: https://github.com/allan074
- *				e-mail: <email>
- *
- *         		name: Marcos Vinicius Volpato
- * 				uri: https://github.com/marcosvolpato
- *				e-mail: volpatomv@gmail.com
- *
  */
 #include <stdio.h>
 #include <stdlib.h>

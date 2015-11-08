@@ -1,6 +1,5 @@
 #include "fila.h"
 
-
 t_fila *f_init(){
 	t_fila *fila = (t_fila*)malloc(sizeof(t_fila));
 	fila->back = NULL;
@@ -35,6 +34,7 @@ t_f_no *f_pop(t_fila *fila){
 	}
 	return NULL;
 }
+
 void f_push(t_fila *fila, t_vertice *vertice, int antecessor, int distancia){
 	t_f_no *f_no = (t_f_no*)malloc(sizeof(t_f_no));
 	f_no->vertice = vertice;
@@ -48,6 +48,7 @@ void f_push(t_fila *fila, t_vertice *vertice, int antecessor, int distancia){
 	}
 	fila->back = f_no;
 }
+
 int f_hasVertice(t_fila *fila, int id){
 	t_f_no *f_no = fila->front;
 	while(f_no != NULL){
@@ -57,6 +58,7 @@ int f_hasVertice(t_fila *fila, int id){
 	}
 	return 0;
 }
+
 void f_deleta(t_fila *fila){
 	f_empty(fila);
 	free(fila);

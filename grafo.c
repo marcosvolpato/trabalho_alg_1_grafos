@@ -1,9 +1,5 @@
 #include "grafo.h"
 
-
-
-
-
 /*
 ======================= FUNÇOES DO TIPO GRAFO =============================================
 */
@@ -12,12 +8,14 @@ t_grafo *g_init(){
 	grafo->v_inicio = NULL;
 	return grafo;
 }
+
 int g_isEmpty(t_grafo *grafo){
 	if(grafo->v_inicio == NULL)
 		return 1;
 	else
 		return 0;
 }
+
 void g_insert(t_grafo *grafo, t_vertice *vertice){
 	if(!v_hasVertice(grafo, vertice->id)){	
 		if(vertice->id < -1){
@@ -75,6 +73,7 @@ void g_insert(t_grafo *grafo, t_vertice *vertice){
 		
 	}
 }
+
 int v_isVisited(t_vertice **visitado, int id, int length){
 	int j;
 	for(j=0;j<length;j++){
@@ -87,7 +86,6 @@ int v_isVisited(t_vertice **visitado, int id, int length){
 	}
 	return 0;
 }
-
 
 t_f_no **g_distancias(t_grafo *grafo, int id){
 	int i = 0, length = v_length(grafo), j, dist, k = 0;
@@ -127,8 +125,6 @@ void g_delete(t_grafo *grafo){
 /*
 ======================= FUNÇOES DO TIPO VERTICE =============================================
 */
-
-
 t_vertice *v_create(int id){
 	t_vertice *vertice =  (t_vertice*)malloc(sizeof(t_vertice));
 	if(id < 0)
@@ -184,6 +180,7 @@ int v_grau(t_grafo *grafo, int id){
 		return 0;
 	}
 }
+
 double v_grau_medio(t_grafo *grafo, int id){
 	if(!g_isEmpty(grafo)){
 		t_vertice *vertice = v_find(grafo, id);
@@ -211,6 +208,7 @@ int v_isNeighbor(t_grafo *grafo, int id1, int id2){
 	}
 	return 0;
 }
+
 double v_clust_coef(t_grafo *grafo, int id){
 	if(!g_isEmpty(grafo)){
 		t_vertice *vertice = v_find(grafo, id);
@@ -247,6 +245,7 @@ int v_length(t_grafo *grafo){
 	}
 	return i;
 }
+
 int v_grau_hie(t_grafo *grafo, int id, int h){
 	if(!g_isEmpty(grafo)){
 		int i = 0, length = v_length(grafo), j, dist, k = 0;
@@ -283,6 +282,7 @@ int v_grau_hie(t_grafo *grafo, int id, int h){
 		return 0;
 	}
 }
+
 void v_delete_all(t_grafo *grafo){
 	t_vertice *vertice = grafo->v_inicio;
 	t_vertice *aux;
@@ -293,6 +293,7 @@ void v_delete_all(t_grafo *grafo){
 		free(aux);
 	}
 }
+
 /*
 ======================= FUNÇOES DO TIPO ARESTA =============================================
 */
@@ -340,6 +341,7 @@ void a_new(t_grafo *grafo, int id1, int id2){
 		vertice = vertice->next;
 	}
 }
+
 int a_hasAresta(t_vertice *vertice, int id){
 	t_aresta *aresta = vertice->a_inicio;
 	while(aresta != NULL){
@@ -349,12 +351,14 @@ int a_hasAresta(t_vertice *vertice, int id){
 	}
 	return 0;
 }
+
 int a_isEmpty(t_vertice *vertice){
 	if(vertice->a_inicio == NULL)
 		return 1;
 	else
 		return 0;
 }
+
 void a_delete_all(t_vertice *vertice){
 	t_aresta *aresta = vertice->a_inicio;
 	t_aresta *aux;

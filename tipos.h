@@ -6,9 +6,8 @@
 
 
 /*
- *========================== Tipos de dados ===========================
+ *========================== Tipos de dados do grafo ===========================
  */
-//typedef struct t_vertice t_vertice;
 typedef struct t_aresta{
 	int id;
 	struct t_aresta *next, *prev;
@@ -25,6 +24,9 @@ typedef struct t_grafo{
 	t_vertice *v_inicio;
 }t_grafo;
 
+/*
+ *========================== Tipos de dados da fila ============================
+ */
 typedef struct t_f_no{
 	t_vertice *vertice;
 	int distancia, antecessor;

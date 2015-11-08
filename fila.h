@@ -16,17 +16,40 @@
 /*
  *========================== Operações ===========================
  */
- //aloca uma nova fila vazia e retorna seu ponteiro
+
+ /*
+  * Aloca uma nova fila vazia e retorna seu ponteiro
+  */
 t_fila *f_init();
-//booleano que retorna 1 se a fila estiver vazia
+
+/*
+ * Booleano que retorna 1 se a fila estiver vazia
+ */
 int f_isEmpty(t_fila *fila);
-//esvazia a fila liberando a memoria de cada nó
+
+/*
+ * Esvazia a fila liberando a memoria de cada nó
+ */
 void f_empty(t_fila *fila);
-//insere um ponteiro de vertice na fila
+
+/*
+ * Insere um ponteiro de vertice na fila
+ */
 void f_push(t_fila *fila, t_vertice *vertice, int antecessor, int distancia);
+
+/*
+ * Retorna um se um vertice com o id recebido estiver na fila
+ */
 int f_hasVertice(t_fila *fila, int id);
+
+/*
+ * Retira o nó da frente da fila e retorna seu ponteiro
+ */
 t_f_no *f_pop(t_fila *fila);
-//int getNum(pilha *p);
+
+/*
+ * Libera a memoria da fila
+ */
 void f_deleta(t_fila *fila);
 
 #endif
